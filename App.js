@@ -2,15 +2,18 @@ import { NavigationContainer } from "react-navigation";
 import React from "react";
 import { createAppContainer } from "react-navigation";
 import { createMaterialBottomTabNavigator } from "react-navigation-material-bottom-tabs";
+import { createStackNavigator } from "react-navigation-stack";
 import {StyleSheet,View} from 'react-native';
-import HomeScreen from "./src/screens/HomeScreen";
+import PantryScreen from "./src/screens/PantryScreen";
 // import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import RecipeListScreen from "./src/screens/RecipeListScreen";
 import ShoppingListScreen from "./src/screens/ShoppingListScreen";
 import ProfileScreen from "./src/screens/ProfileScreen";
+import SignInScreen from "./src/screens/SignInScreen";
 import Icon from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather'
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 const styles = StyleSheet.create({
   container: {
@@ -22,8 +25,8 @@ const styles = StyleSheet.create({
 
 const TabNavigator = createMaterialBottomTabNavigator(
   {
-  Home:{
-    screen: HomeScreen,
+  Pantry:{
+    screen: PantryScreen,
     navigationOptions:{
       tabBarIcon: ({tintColor}) => (
         <View>
@@ -64,7 +67,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
   }
 },
 {
-  initialRouteName: 'Home',
+  initialRouteName: 'Pantry',
   activeColor: '#ffffff',
   inactiveColor: '#bda1f7',
   barStyle: { backgroundColor: '#6948f4' },

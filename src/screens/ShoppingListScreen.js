@@ -1,17 +1,20 @@
 import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import Header from '../components/Header'
 
 const ShoppingListScreen = () => {
-    return <View style={styles.container}>
-        <Text>ShoppingListScreen</Text>
-    </View>
+    return <View>
+                <Header type={"shopping"}/>
+                <View style={styles.container}>
+                    <Text>ShoppingScreen</Text>
+                </View>
+            </View>
 }
 
 const styles = StyleSheet.create({
     container: {
         justifyContent:'center',
         alignItems:'center',
-        flex: 1
       }
 });
 
