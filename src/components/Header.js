@@ -24,7 +24,7 @@ const Header = (props) => {
                     <View style={styles.searchBar}>
                         <SearchBar/>
                     </View>
-                    <TouchableOpacity onPress={}>
+                    <TouchableOpacity onPress={()=> console.log("Three dots pressed")}>
                         <Entypo name={'dots-three-vertical'} size={28}/>
                     </TouchableOpacity>
                 </View>
@@ -37,7 +37,9 @@ const Header = (props) => {
                         <View style={styles.searchBar}>
                             <SearchBar style={styles.searchBar}/>
                         </View>
+                        <TouchableOpacity onPress={()=> console.log("Three dots pressed")}>
                         <Entypo name={'dots-three-vertical'} size={28}/>
+                    </TouchableOpacity>
                     </View>
                 </View>
             break;
@@ -48,7 +50,9 @@ const Header = (props) => {
                         <View style={styles.searchBar}>
                             <SearchBar />
                         </View>
-                        <Entypo name={'heart'} size={35}/>
+                        <TouchableOpacity onPress={()=> console.log("Heart Pressed")}>
+                            <Entypo name={'heart'} size={35}/>
+                        </TouchableOpacity>
                     </View>
                 </View>
     }
