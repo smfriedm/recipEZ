@@ -16,7 +16,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import Feather from 'react-native-vector-icons/Feather'
 import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {Provider as AuthProvider} from './src/contexts/AuthContext'
-import { Provider as HeroProvider } from "./src/contexts/FoodContext";
+import { Provider as FoodProvider } from "./src/contexts/FoodContext";
+import { Provider as UserFoodProvider } from "./src/contexts/UserFoodContext";
 import FoodDetailScreen from "./src/screens/FoodDetailScreen";
 
 
@@ -141,9 +142,11 @@ const App = createAppContainer(switchNavigator);
 export default () => {
   return (
     <AuthProvider>
-      <HeroProvider>
+      <FoodProvider>
+	<UserFoodProvider>
 	<App />
-	</HeroProvider>
+	</UserFoodProvider>
+	</FoodProvider>
     </AuthProvider>
   )
 };
